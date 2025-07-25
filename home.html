@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Deepa Mehendi Artist | Lucknow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+      background: #fff9f5;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Classic Official Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 900;
+      border-bottom: 3px solid #d4af37;
+    }
+
+    .brand-area {
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .brand-area h2 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: clamp(24px, 6vw, 32px);
+      color: #4b2e2e;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    .brand-area p {
+      margin: 4px 0 0;
+      font-style: italic;
+      color: #d4af37;
+      font-size: clamp(12px, 3.5vw, 14px);
+      font-weight: 500;
+    }
+
+    .location-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      margin-top: 5px;
+    }
+
+    .location {
+      font-weight: bold;
+      color: #4b2e2e;
+      font-size: clamp(12px, 3.5vw, 14px);
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .location i {
+      color: #d4af37;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: #4b2e2e;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px;
+      transition: all 0.3s;
+    }
+
+    .menu-toggle:hover {
+      color: #d4af37;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 10px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 10px 0;
+      z-index: 1000;
+      display: none;
+      width: 180px;
+      border: 1px solid #f0e6d2;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 15px;
+      color: #4b2e2e;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s;
+      border-left: 3px solid transparent;
+    }
+
+    .dropdown-menu a:hover {
+      background: #fff9f0;
+      color: #d4af37;
+      border-left: 3px solid #d4af37;
+    }
+
+    .dropdown-menu a i {
+      margin-right: 8px;
+      width: 18px;
+      text-align: center;
+    }
+
+    nav { 
+      margin-top: 12px;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    nav::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #4b2e2e;
+      font-weight: 600;
+      font-size: clamp(13px, 3.8vw, 15px);
+      display: inline-block;
+      padding: 5px 0;
+      position: relative;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav a:first-child {
+      margin-left: 15px;
+    }
+
+    nav a:last-child {
+      margin-right: 15px;
+    }
+
+    nav a:hover { 
+      color: #d4af37; 
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d4af37;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Main Content */
+    .welcome-box {
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .welcome-box video {
+      width: 100%;
+      border-radius: 0;
+      display: block;
+    }
+
+    .section {
+      width: 95%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #4b2e2e;
+      margin-bottom: 25px;
+      font-size: clamp(22px, 6vw, 28px);
+      padding: 0 10px;
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+
+    .section h2 i { 
+      margin-right: 8px; 
+      color: #d4af37;
+      font-size: clamp(18px, 5vw, 24px);
+    }
+
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    .section p {
+      padding: 0 15px;
+      text-align: center;
+      font-size: clamp(14px, 4vw, 16px);
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Enhanced Gallery Styles */
+    .gallery-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery-preview-row {
+      display: flex;
+      gap: 15px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery-preview img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 4px;
+      transition: all 0.4s;
+      cursor: pointer;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #f0e6d2;
+    }
+
+    .gallery-preview img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .gallery-button {
+      display: block;
+      margin: 25px auto 15px;
+      padding: 12px 30px;
+      background: #d4af37;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 300px;
+      transition: all 0.3s;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-button:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(212, 175, 55, 0.4);
+    }
+
+    .gallery-button:active {
+      transform: translateY(0);
+    }
+
+    .gallery-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+
+    .gallery-button:focus:not(:active)::after {
+      animation: ripple 0.6s ease-out;
+    }
+
+    .full-gallery {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    .full-gallery.show {
+      display: flex;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .full-gallery img {
+      width: calc(50% - 15px);
+      max-width: 300px;
+      border-radius: 4px;
+      transition: all 0.3s;
+      cursor: pointer;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #f0e6d2;
+    }
+
+    .full-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      z-index: 1;
+    }
+
+    /* Enhanced Lightbox Styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      touch-action: none;
+    }
+
+    .lightbox.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      touch-action: none;
+    }
+
+    .lightbox-img-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      touch-action: none;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      transition: transform 0.3s;
+      transform-origin: center center;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1002;
+      transition: all 0.3s;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 1001;
+    }
+
+    .lightbox-nav button {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .lightbox-nav button:hover {
+      background: rgba(255,255,255,0.4);
+      transform: scale(1.1);
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 16px;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 15px;
+      border-radius: 20px;
+      z-index: 1001;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Table Styles */
+    .rate-table {
+      margin: 30px auto;
+      width: 95%;
+      max-width: 800px;
+      border-collapse: collapse;
+      font-size: clamp(13px, 3.8vw, 15px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .rate-table th, .rate-table td {
+      border: 1px solid #f0e6d2;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .rate-table th {
+      background: #d4af37;
+      color: #fff;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .rate-table tr:nth-child(even) {
+      background: #fffaf0;
+    }
+
+    .rate-table tr:hover {
+      background: #fff5e6;
+    }
+
+    /* FAQ Styles */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 4px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      background: #fffaf0;
+      border-left: 4px solid #f0e6d2;
+    }
+
+    .faq-item.open {
+      border-left: 4px solid #d4af37;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .faq-question {
+      font-size: clamp(15px, 4vw, 17px);
+      color: #4b2e2e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      font-size: clamp(14px, 3.8vw, 16px);
+      color: #555;
+      margin-top: 0;
+      line-height: 1.6;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      margin-top: 12px;
+    }
+
+    .faq-item .icon {
+      transition: transform 0.3s ease;
+      font-size: clamp(12px, 3.5vw, 14px);
+      color: #d4af37;
+    }
+
+    .faq-item.open .icon {
+      transform: rotate(180deg);
+    }
+
+    /* Video Styles */
+    .video-container {
+      position: relative;
+      width: 95%;
+      max-width: 800px;
+      margin: 30px auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container video {
+      width: 100%;
+      display: block;
+    }
+
+    /* Review Styles */
+    .reviews-section {
+      padding: 20px 0;
+    }
+
+    .review-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 15px;
+      scroll-snap-type: x mandatory;
+      margin: 0 auto;
+      max-width: 100%;
+      box-sizing: border-box;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .review-scroll-container video {
+      flex: 0 0 auto;
+      width: 280px;
+      max-width: 85vw;
+      scroll-snap-align: start;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #4b2e2e;
+      font-size: clamp(13px, 3.8vw, 15px);
+      background: #fffaf0;
+      border-top: 1px solid #f0e6d2;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    footer a:hover {
+      color: #4b2e2e;
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .footer-contact i {
+      color: #d4af37;
+    }
+
+    /* Animations */
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.8; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(20, 20);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* Responsive Adjustments */
+    @media (min-width: 576px) {
+      .gallery-preview-row {
+        flex-direction: row;
+      }
+      
+      .gallery-preview img {
+        width: calc(50% - 10px);
+      }
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-top: 110px;
+      }
+
+      header {
+        padding: 10px 40px;
+      }
+
+      nav a {
+        margin: 0 15px;
+      }
+
+      .full-gallery img {
+        width: calc(33.33% - 15px);
+      }
+
+      .gallery-preview img {
+        max-width: 500px;
+      }
+      
+      .review-scroll-container video {
+        width: 320px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .full-gallery img {
+        width: calc(25% - 15px);
+        max-width: 250px;
+      }
+      
+      .gallery-preview-row {
+        gap: 20px;
+      }
+      
+      .gallery-preview img {
+        width: calc(33.33% - 15px);
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Header -->
+    <header>
+      <div class="brand-area">
+        <h2>Deepa Mehendi Artist</h2>
+        <p>Bridal & Traditional Mehendi Specialist</p>
+        <div class="location-row">
+          <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#design-gallery"><i class="fas fa-images"></i> Design Gallery</a>
+            <a href="#guest-gallery"><i class="fas fa-users"></i> Guest Gallery</a>
+            <a href="#colour-gallery"><i class="fas fa-palette"></i> Colours</a>
+            <a href="#packages"><i class="fas fa-list"></i> Packages</a>
+            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="https://wa.me/918874896711"><i class="fas fa-phone"></i> Contact Us</a>
+          </div>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> LUCKNOW</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#design-gallery">Gallery</a>
+        <a href="#guest-gallery">Guest Gallery</a>
+        <a href="#colour-gallery">Colours</a>
+        <a href="#packages">Packages</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <!-- Welcome Video -->
+    <div class="welcome-box" id="welcome">
+      <video autoplay muted loop playsinline id="w-video">
+        <source src="index/w.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Certified Artist Section -->
+    <section class="section">
+      <h2><i class="fas fa-award"></i>Certified Artist</h2>
+      <p>Certified with WedMeGood. Our team is hardworking and talented to make your events memorable with exquisite mehendi designs that last.</p>
+    </section>
+    
+    <!-- Timelapse Video -->
+    <div class="video-container">
+      <video src="timelaps/T.mp4" poster="timelaps/t.jpeg" controls playsinline></video>
+    </div>
+
+    <!-- Signature Mehendi Section -->
+    <section class="section">
+      <h2><i class="fas fa-feather-alt"></i>Signature Mehendi</h2>
+      <p>
+        We create Traditional, Royal, and Arabic Mehendi designs filled with beauty and emotion – perfect for your special day. Each design is meticulously crafted to complement your bridal look.
+      </p>
+    </section>
+
+    <!-- Design Gallery -->
+    <section class="section" id="design-gallery">
+      <h2><i class="fas fa-images"></i>Design Gallery</h2>
+      <div class="gallery-preview" id="design-preview">
+        <div class="gallery-preview-row">
+          <img src="images/H2.jpeg" alt="Bridal Mehendi Design" onclick="zoomImage(this)">
+          <img src="images/H3.jpeg" alt="Bridal Mehendi Design" onclick="zoomImage(this)">
+          <img src="images/H4.jpeg" alt="Bridal Mehendi Design" onclick="zoomImage(this)" class="mobile-hide">
+        </div>
+        <button onclick="toggleGallery('design')" class="gallery-button">View Full Design Gallery</button>
+      </div>
+      <div id="full-design-gallery" class="full-gallery"></div>
+    </section>
+
+    <!-- Guest Gallery -->
+    <section class="section" id="guest-gallery">
+      <h2><i class="fas fa-users"></i>Guest Gallery</h2>
+      <div class="gallery-preview" id="guest-preview">
+        <div class="gallery-preview-row">
+          <img src="guest/G1.jpeg" alt="Guest Mehendi Design" onclick="zoomImage(this)">
+          <img src="guest/G2.jpeg" alt="Guest Mehendi Design" onclick="zoomImage(this)">
+          <img src="guest/G3.jpeg" alt="Guest Mehendi Design" onclick="zoomImage(this)" class="mobile-hide">
+        </div>
+        <button onclick="toggleGallery('guest')" class="gallery-button">View Guest Design Collection</button>
+      </div>
+      <div id="full-guest-gallery" class="full-gallery"></div>
+    </section>
+
+    <!-- Colour Gallery -->
+    <section class="section" id="colour-gallery">
+      <h2><i class="fas fa-palette"></i>Our Mehendi Colours</h2>
+      <p>Explore our range of beautiful, long-lasting mehendi colors that enhance your designs.</p>
+      <div class="gallery-preview" id="colour-preview">
+        <div class="gallery-preview-row">
+          <img src="colour/C1.jpeg" alt="Mehendi Colour Sample" onclick="zoomImage(this)">
+          <img src="colour/C2.jpeg" alt="Mehendi Colour Sample" onclick="zoomImage(this)">
+          <img src="colour/C3.jpeg" alt="Mehendi Colour Sample" onclick="zoomImage(this)" class="mobile-hide">
+        </div>
+        <button onclick="toggleGallery('colour')" class="gallery-button">Explore More Colours</button>
+      </div>
+      <div id="full-colour-gallery" class="full-gallery"></div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section" id="packages">
+      <h2><i class="fas fa-list"></i>Our Offerings & Packages</h2>
+      <p>Customized packages available for weddings, engagements, and other special occasions.</p>
+      <table class="rate-table">
+        <tr><th>Offerings</th><th>Rates</th></tr>
+        <tr><td>Bridal Mehendi (Full Arms & Feet)</td><td>₹5100 onwards</td></tr>
+        <tr><td>Bridal Mehendi (Hands Only)</td><td>₹3500 onwards</td></tr>
+        <tr><td>Guest Mehendi – Traditional</td><td>₹500 per person</td></tr>
+        <tr><td>Guest Mehendi – Arabic</td><td>₹300 per person</td></tr>
+        <tr><th colspan="2">Popular Packages</th></tr>
+        <tr><td>1 Bride + 10 Guests</td><td>₹11,000</td></tr>
+        <tr><td>1 Bride + 20 Guests</td><td>₹15,000</td></tr>
+        <tr><td>1 Bride + 50 Guests</td><td>₹25,000</td></tr>
+      </table>
+      <p style="text-align:center; font-weight:600; font-size:clamp(14px, 4vw, 16px); color:#d4af37; padding: 0 15px;">
+        Custom packages available for destination weddings and large events. Contact us for personalized quotes.
+      </p>
+    </section>
+
+    <!-- Mehendi Emotion Video -->
+    <div class="video-container">
+      <video width="100%" autoplay muted loop playsinline id="nv-video">
+        <source src="NV.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p style="text-align:center; font-size:clamp(16px, 4.5vw, 18px); font-style:italic; font-weight:600; color:#4b2e2e; margin-top:-10px; padding: 0 15px; font-family: 'Playfair Display', serif;">
+      "Mehendi is not just an art, it's an emotion that celebrates love and tradition."
+    </p>
+
+    <!-- FAQ Section -->
+    <div class="section" id="faq">
+      <h2><i class="fas fa-question-circle"></i>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Is the advance amount refundable? <i class="fas fa-chevron-down icon"></i>
+          </div>
+          <div class="faq-answer">No, the advance amount is not refundable as it secures your booking date and time slot.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            When should I book my mehendi appointment? <i class="fas fa-chevron-down icon"></i>
+          </div>
+          <div class="faq-answer">We recommend booking at least 2-3 weeks in advance, especially during wedding seasons. For popular dates, booking 1-2 months ahead is advisable.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Do you provide services outside Lucknow? <i class="fas fa-chevron-down icon"></i>
+          </div>
+          <div class="faq-answer">Yes, we provide services outside Lucknow with additional travel charges depending on the location and accommodation requirements.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            Are the mehendi colours natural and safe? <i class="fas fa-chevron-down icon"></i>
+          </div>
+          <div class="faq-answer">Absolutely! We use only natural, high-quality mehendi that is safe for all skin types. Our colors are free from harmful chemicals and provide a rich, dark stain.</div>
+        </div>
+        
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            How long does the mehendi application take? <i class="fas fa-chevron-down icon"></i>
+          </div>
+          <div class="faq-answer">Bridal mehendi typically takes 3-5 hours depending on the complexity of design. Guest mehendi takes about 30-60 minutes per person.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thanks Section -->
+    <section class="section">
+      <h2><i class="fas fa-heart"></i>Special Thanks</h2>
+      <p>Thank you for trusting us to be part of your celebrations. We're honored to contribute to making your special moments even more beautiful with our art.</p>
+    </section>
+
+    <!-- Reviews -->
+    <div class="section reviews-section">
+      <h2><i class="fas fa-star"></i>Client Testimonials</h2>
+      <div class="review-scroll-container">
+        <video src="thanks/1.mp4" poster="thanks/1p.jpeg" controls playsinline></video>
+        <video src="thanks/2.mp4" poster="thanks/2p.jpeg" controls playsinline></video>
+        <video src="thanks/3.mp4" poster="thanks/3p.jpeg" controls playsinline></video>
+        <video src="thanks/4.mp4" poster="thanks/4p.jpeg" controls playsinline></video>
+      </div>
+    </div>
+
+    <!-- Artist Section -->
+    <section class="section">
+      <h2><i class="fas fa-user"></i>About The Artist</h2>
+      <p>Deepa, a passionate mehendi artist with over 12 years of experience in bridal and festive mehendi, believes in creating lasting memories with every intricate stroke. Trained in traditional Indian and contemporary Arabic styles, she blends artistry with precision to deliver designs that enhance your natural beauty. Her work has graced hundreds of brides across Uttar Pradesh, making her one of Lucknow's most sought-after mehendi artists.</p>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918874896711?text=Hi%20Deepa%20Ji%2C%20I%20would%20like%20to%20book%20a%20mehendi%20appointment.%20Please%20share%20details." 
+      class="whatsapp-float" 
+      target="_blank" 
+      title="Book on WhatsApp"
+      aria-label="Contact via WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-contact">
+        <i class="fas fa-phone-alt"></i>
+        <strong>Contact:</strong> <a href="https://wa.me/918874896711">+91 8874 896711</a>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <a href="mailto:deepamehendiartist@gmail.com" style="display:inline-flex;align-items:center;gap:5px;">
+          <i class="fas fa-envelope"></i> deepamehendiartist@gmail.com
+        </a>
+      </div>
+      <div>
+        &copy; 2025 Deepa Mehendi Artist. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Enhanced Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+      <div class="lightbox-img-container">
+        <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+      </div>
+      <div class="lightbox-nav">
+        <button onclick="navigateLightbox(-1)" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+        <button onclick="navigateLightbox(1)" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle FAQ function
+    function toggleFAQ(el) {
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== el) {
+          item.classList.remove('open');
+        }
+      });
+      el.classList.toggle('open');
+    }
+
+    // Toggle dropdown menu
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.matches('.menu-toggle') && !event.target.closest('.dropdown-menu')) {
+        const dropdowns = document.getElementsByClassName('dropdown-menu');
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    });
+
+    // Enhanced Lightbox functionality with pinch zoom
+    let currentImages = [];
+    let currentIndex = 0;
+    let touchStartDistance = null;
+    let initialScale = 1;
+    let currentScale = 1;
+    let transformOrigin = { x: 0, y: 0 };
+
+    function openLightbox(images, index) {
+      currentImages = images;
+      currentIndex = index;
+      updateLightboxImage();
+      document.getElementById('lightbox').classList.add('show');
+      document.body.style.overflow = 'hidden';
+      resetZoom();
+      updateCounter();
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('show');
+      document.body.style.overflow = '';
+      resetZoom();
+    }
+
+    function updateLightboxImage() {
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = currentImages[currentIndex];
+      lightboxImg.alt = 'Gallery image ' + (currentIndex + 1);
+      updateCounter();
+    }
+
+    function updateCounter() {
+      document.getElementById('lightbox-counter').textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    }
+
+    function navigateLightbox(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = currentImages.length - 1;
+      if (currentIndex >= currentImages.length) currentIndex = 0;
+      updateLightboxImage();
+      resetZoom();
+    }
+
+    function resetZoom() {
+      currentScale = 1;
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.style.transform = `scale(${currentScale})`;
+      lightboxImg.style.transformOrigin = 'center center';
+    }
+
+    // Handle touch events for pinch zoom
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxContainer = document.querySelector('.lightbox-img-container');
+
+    lightboxContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    lightboxContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+    lightboxContainer.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+    function handleTouchStart(e) {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        // Calculate initial distance between two fingers
+        touchStartDistance = getDistance(
+          e.touches[0].clientX, e.touches[0].clientY,
+          e.touches[1].clientX, e.touches[1].clientY
+        );
+        initialScale = currentScale;
+        
+        // Calculate transform origin between the two fingers
+        transformOrigin = {
+          x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
+          y: (e.touches[0].clientY + e.touches[1].clientY) / 2
+        };
+        
+        // Convert to image coordinates
+        const imgRect = lightboxImg.getBoundingClientRect();
+        transformOrigin.x = (transformOrigin.x - imgRect.left) / imgRect.width;
+        transformOrigin.y = (transformOrigin.y - imgRect.top) / imgRect.height;
+      }
+    }
+
+    function handleTouchMove(e) {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        // Calculate current distance between fingers
+        const currentDistance = getDistance(
+          e.touches[0].clientX, e.touches[0].clientY,
+          e.touches[1].clientX, e.touches[1].clientY
+        );
+        
+        // Calculate scale factor
+        if (touchStartDistance !== null) {
+          currentScale = initialScale * (currentDistance / touchStartDistance);
+          // Limit zoom
+          currentScale = Math.max(1, Math.min(currentScale, 5));
+          
+          // Apply transform with origin
+          lightboxImg.style.transformOrigin = `${transformOrigin.x * 100}% ${transformOrigin.y * 100}%`;
+          lightboxImg.style.transform = `scale(${currentScale})`;
+        }
+      }
+    }
+
+    function handleTouchEnd(e) {
+      if (e.touches.length < 2) {
+        touchStartDistance = null;
+      }
+    }
+
+    function getDistance(x1, y1, x2, y2) {
+      return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    // Click to zoom in/out
+    lightboxImg.addEventListener('click', function(e) {
+      if (currentScale === 1) {
+        // Zoom in to 2x at click position
+        const rect = this.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        
+        currentScale = 2;
+        this.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+        this.style.transform = `scale(${currentScale})`;
+      } else {
+        // Reset zoom
+        resetZoom();
+      }
+    });
+
+    // Double tap to zoom
+    let lastTap = 0;
+    lightboxImg.addEventListener('touchend', function(e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+      
+      if (tapLength < 300 && tapLength > 0) {
+        e.preventDefault();
+        if (currentScale === 1) {
+          // Zoom in to 2x at tap position
+          const rect = this.getBoundingClientRect();
+          const x = (e.changedTouches[0].clientX - rect.left) / rect.width;
+          const y = (e.changedTouches[0].clientY - rect.top) / rect.height;
+          
+          currentScale = 2;
+          this.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+          this.style.transform = `scale(${currentScale})`;
+        } else {
+          // Reset zoom
+          resetZoom();
+        }
+      }
+      
+      lastTap = currentTime;
+    });
+
+    // Image zoom functionality
+    function zoomImage(img) {
+      // Get all images in the same gallery
+      const gallery = img.closest('.gallery-preview') || img.closest('.full-gallery');
+      const images = Array.from(gallery.querySelectorAll('img')).map(i => i.src);
+      const index = images.indexOf(img.src);
+      
+      openLightbox(images, index);
+    }
+
+    // Gallery data
+    const galleries = {
+      design: {
+        previewId: 'design-preview',
+        galleryId: 'full-design-gallery',
+        images: [
+          ...Array.from({length: 16}, (_, i) => `images/H${i+2}.jpeg`),
+          ...Array.from({length: 13}, (_, i) => `images/L${i+1}.jpeg`)
+        ],
+        buttonText: {
+          more: 'View Full Design Gallery',
+          less: 'Close Design Gallery'
+        }
+      },
+      guest: {
+        previewId: 'guest-preview',
+        galleryId: 'full-guest-gallery',
+        images: [
+          ...Array.from({length: 13}, (_, i) => `guest/G${i+1}.jpeg`),
+          ...Array.from({length: 8}, (_, i) => `guest/S${i+1}.jpeg`)
+        ],
+        buttonText: {
+          more: 'View Guest Design Collection',
+          less: 'Close Guest Gallery'
+        }
+      },
+      colour: {
+        previewId: 'colour-preview',
+        galleryId: 'full-colour-gallery',
+        images: Array.from({length: 14}, (_, i) => `colour/C${i+1}.jpeg`),
+        buttonText: {
+          more: 'Explore More Colours',
+          less: 'Close Colour Gallery'
+        }
+      }
+    };
+
+    // Currently open gallery
+    let currentOpenGallery = null;
+
+    // Toggle gallery function
+    function toggleGallery(galleryType) {
+      const gallery = galleries[galleryType];
+      const galleryEl = document.getElementById(gallery.galleryId);
+      const previewEl = document.getElementById(gallery.previewId);
+      const button = previewEl.querySelector('.gallery-button');
+      
+      // If this gallery is already open, close it
+      if (galleryEl.classList.contains('show')) {
+        galleryEl.classList.remove('show');
+        previewEl.style.display = 'flex';
+        button.textContent = gallery.buttonText.more;
+        currentOpenGallery = null;
+        return;
+      }
+      
+      // Close any other open gallery first
+      if (currentOpenGallery && currentOpenGallery !== galleryType) {
+        const currentGallery = galleries[currentOpenGallery];
+        const currentGalleryEl = document.getElementById(currentGallery.galleryId);
+        const currentPreviewEl = document.getElementById(currentGallery.previewId);
+        const currentButton = currentPreviewEl.querySelector('.gallery-button');
+        
+        currentGalleryEl.classList.remove('show');
+        currentPreviewEl.style.display = 'flex';
+        currentButton.textContent = currentGallery.buttonText.more;
+      }
+      
+      // If the gallery is empty, populate it
+      if (galleryEl.children.length === 0) {
+        galleryEl.innerHTML = "";
+        gallery.images.forEach((src, index) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = galleryType.charAt(0).toUpperCase() + galleryType.slice(1) + " Image " + (index + 1);
+          img.onclick = () => {
+            const allImages = Array.from(galleryEl.querySelectorAll('img')).map(i => i.src);
+            openLightbox(allImages, index);
+          };
+          galleryEl.appendChild(img);
+        });
+      }
+      
+      // Show the gallery
+      previewEl.style.display = "none";
+      galleryEl.classList.add('show');
+      button.textContent = gallery.buttonText.less;
+      currentOpenGallery = galleryType;
+      
+      // Scroll to the gallery
+      galleryEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Close lightbox when clicking outside image
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox.classList.contains('show')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateLightbox(1);
+        }
+      }
+    });
+
+    // Video autoplay and unmute functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      
+      videos.forEach(video => {
+        // Unmute on click
+        video.addEventListener('click', function() {
+          if (this.muted) {
+            this.muted = false;
+          }
+          this.play();
+        });
+        
+        // Add aria-label for accessibility
+        if (!video.getAttribute('aria-label')) {
+          video.setAttribute('aria-label', 'Video content');
+        }
+      });
+      
+      // Pause other videos when one plays
+      document.addEventListener('play', function(e) {
+        const allVideos = document.querySelectorAll('video');
+        allVideos.forEach(video => {
+          if (video !== e.target && !video.paused) {
+            video.pause();
+          }
+        });
+      }, true);
+      
+      // Pause videos when they're not in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.target.tagName === 'VIDEO') {
+            if (entry.isIntersecting) {
+              if (entry.target.id === 'w-video' || entry.target.id === 'nv-video') {
+                entry.target.play().catch(e => console.log('Autoplay prevented:', e));
+              }
+            } else {
+              entry.target.pause();
+            }
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      document.querySelectorAll('video').forEach(video => {
+        observer.observe(video);
+      });
+      
+      // Hide third image in preview on mobile
+      function handleResize() {
+        const mobileHideElements = document.querySelectorAll('.mobile-hide');
+        if (window.innerWidth < 768) {
+          mobileHideElements.forEach(el => el.style.display = 'none');
+        } else {
+          mobileHideElements.forEach(el => el.style.display = 'block');
+        }
+      }
+      
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    });
+  </script>
+</body>
+</html>
